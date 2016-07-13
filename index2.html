@@ -1,0 +1,85 @@
+<!doctype html>
+	<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Assignment 5, Part 2</title>
+        
+        </head>
+	<script>
+	    window.addEventListener("load", init, false);
+	    function init(){
+	        var calu = document.getElementById("calu");
+	       calu.addEventListener("click",chooseFunction,false);
+	    }
+	    
+	    function calculat() {
+	            var equa = document.getElementById("result");
+	            equa.value = eval(equa.value);
+	            }
+	
+	    function enter(num) {
+	            var result = document.getElementById("result");
+	            num = event.target.value;
+	            result.value += num;
+	            }
+        
+        function Clear() {
+                result.value="";
+                }
+        
+        	
+	    function chooseFunction() {
+	        var number = event.target.value;
+            if(number == "=") {
+	          
+	            calculat();
+	        } else {
+                enter(number);
+            }
+	    }
+	    
+	
+	</script>
+	
+	
+	<body>
+        
+        <article id = "calu">
+            
+		<input type="text"  id="result" readonly>
+            
+        
+	    <br>
+        <br>
+	         <input type="button" id="seven" value="7">
+	         <input type="button" id="eight" value="8">
+	         <input type="button" id="nine" value="9">
+             <input type="button" id="multiply" value="*">
+	    
+	    <br>
+        <br>
+	         <input type="button" id="four" value="4">
+	         <input type="button" id="five" value="5">
+	         <input type="button" id="six" value="6">
+             <input type="button" id="divide" value="/">
+	     
+	    <br>
+        <br>
+	         <input type="button" id="one" value="1">
+	         <input type="button" id="two" value="2">
+	         <input type="button" id="three" value="3">
+	         <input type="button" id="add" value="+">
+	    <br>
+        <br>
+	         <input type="button" id="zero" value="0">
+	         <input type="button" id="period" value=".">
+	         <input type="button" id="equal" value="=">
+             <input type="button" id="subtract" value="-">
+        <br>
+        <br>
+            
+        </article>
+        
+        <button type="button" id="CLEAR" onclick="Clear()">Clear</button>
+	</body>
+	</html>
